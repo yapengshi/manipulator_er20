@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="er20_and_rotation" >
+
+<!-- baxter -->
+  <xacro:include filename="$(find arm_er20)/urdf/arm_er20.urdf" />
+
+<link name="world"/>
+
+<joint name="world_to_er20" type="fixed">
+  <parent link="world"/>
+  <child link="base_link"/>
+</joint>
+
+
+  <!-- table -->
+  <xacro:include filename="$(find rotation)/urdf/rotation.urdf" />
+
+  <joint name="world_to_rotation" type="fixed" >
+    <parent link="world"/>
+    <child link="Rbase_link"/>
+    <origin xyz="1.3 0 0" />
+  </joint>
+
+</robot>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="ehbot">
+
+  <xacro:include filename="$(find ros_robotics)/urdf/arm_er20.urdf.xacro"/>
+  <xacro:include filename="$(find ros_robotics)/urdf/arm_er20.transmission.xacro"/>
+  <xacro:include filename="$(find ros_robotics)/gazebo/common.gazebo.xacro"/>
+
+</robot>
