@@ -56,4 +56,6 @@ target_link_libraries(main
         ${catkin_LIBRARIES})
 add_dependencies(main stage_first_generate_messages_cpp)
 
-
+add_executable(robot_joint_pub src/robot_joint_pub.cc)
+target_link_libraries(robot_joint_pub
+        ${catkin_LIBRARIES})

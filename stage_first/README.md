@@ -23,4 +23,22 @@ c)　Offset Verify =　xxx	k时刻校正前后末端位置偏差（与误差输�
 ----
 
 
+## joint-state-pub node add
+添加简单的sensor_msgs::JointState
 
+[问题]：机器人出现关节跳变
+https://blog.csdn.net/weixin_43658047/article/details/110210008
+关键参数
+ros::Rate rate(20)
+nh.advertise<sensor_msgs::JointState>("joint_states",1000);
+
+```
+roslaunch ros_robotics rrbot_rviz.launch
+rosrun stage_first robot_joint_pub
+```
+
+# depend
+[problem]  rviz No transform from [base_link] to [link_1]
+1. sudo apt-get install unicode
+2. sudo apt-get install ros-noetic-joint-state-publisher
+3. sudo apt-get install ros-noetic-robot-state-publisher
